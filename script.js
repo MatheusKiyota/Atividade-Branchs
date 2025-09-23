@@ -20,9 +20,15 @@ window.addEventListener('click', function(event) {
 });
 
 
-document.getElementById('changeColorButton').addEventListener('click', function() {
-    document.body.style.backgroundColor = 
-        document.body.style.backgroundColor === 'lightblue' ? 'white' : 'lightblue';
-});
+document.getElementById('changeColorButton').addEventListener('click', function () {
+    const isNavy = document.body.style.backgroundColor === 'gray';
 
+    if (isNavy) {
+        document.body.style.backgroundColor = 'white';
+        document.body.style.color = 'black'; 
+    } else {
+        document.body.style.backgroundColor = 'gray';
+        document.body.style.color = 'white'; 
+    }
+});
 
